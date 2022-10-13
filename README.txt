@@ -1,3 +1,6 @@
+THIS PROJECT IS UNFINISHED, PROBABLY POORLY CODED, AND MAY MAKE THINGS GO BOOM!
+-----!!! Y O U  H A V E  B E E N  W A R N E D !!!-----
+
 WEATHER SLICE
 
 Weather Slice is a recreation of the original Weather STAR 4000 system
