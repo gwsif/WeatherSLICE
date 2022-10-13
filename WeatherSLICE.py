@@ -34,7 +34,7 @@ import sys
 pygame.init()
 
 # Set screen Title and Icon
-pygame.display.set_caption("The Weather SLICE")
+pygame.display.set_caption("WeatherSLICE")
 icon = pygame.image.load('assets/graphics/weatherSLICE_icon.png')
 pygame.display.set_icon(icon)
 
