@@ -17,7 +17,7 @@ television station.
 
 ==F.A.Q==
 Q. What does SLICE stand for?
-A.    SLICE stands for STAR-Like Inspired Channel Emulation. STAR stands for Satellite Transponder Addressable Receive and was one of the early hallmarks of public-facing weather forecasting systems.
+A.    SLICE stands for STAR-Like Inspired Channel Emulation. STAR stands for Satellite Transponder Addressable Receiver and was one of the early hallmarks of public-facing weather forecasting systems.
 
 Q. Is this affiliated with TWC (The Weather Channel)?
 A.    No. Weather SLICE is independently created and owned. TWC (The Weather Channel), IBM, and it's known affiliates are not involved in this project nor are they associated with it in any capacity.
