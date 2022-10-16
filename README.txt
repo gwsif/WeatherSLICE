@@ -36,5 +36,5 @@ A.    No. Dan Chandler is the original voice of the Weather Star 4000 and, while
 Q. Does this come with TV shows, commercials, or other content?
 A.    No. But we do support them! If you'd like you can download some (that you legally own of course) and plug them in. The system does not differentiate. In essence what WeatherSLICE does for content outside the STAR4000 recreation is that it classifies videos as either episodes or commercials and attempts to basically "smart" shuffle them in an effort to mimic television stations of yore (and even modern day perhaps!). 
 
-Q. Is this related to TechKnight's project?
-A.    No - however it is heavily inspired by it. Without the absolutely phenomenal undertaking and dedication put forth by THETechKnight, this project would be a fever dream at best.
+Q. Is this related to THETechKnight's project?
+A.    No - however it is heavily inspired by it. Without the absolutely phenomenal undertaking and dedication put forth by THETechKnight, this project would be a fever dream at best. I owe a deep gratitude to THETechKnight for re-igniting in me the desire to make this as well as providing the painstakingly created and exceptionally well documented revserse engineering of the original Weather Star 4000 system. Thank you. My gratitude is immense.
