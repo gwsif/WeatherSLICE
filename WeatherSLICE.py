@@ -1,13 +1,13 @@
-#@@ Notes to myself
-#@@ Notes that should be purged before github start with #@@
-#@@ we swapped to pygame to support the Weather Star 4000's infamous 768x480 images.
-#@@    Please note that the other resolutions and their associated command bits are
-#@@    0 384x120
-#@@    1 384x240
-#@@    2 768x240
-#@@    3 768x480 (ours)
-#@@
-#@@ NTSC RESOLUTION IS NTSC 486x440.
+#// Notes to myself
+#// Notes that should be purged before github start with #//
+#// We swapped to pygame to support the Weather Star 4000's infamous 768x480 images.
+#//    Please note that the other resolutions and their associated command bits are
+#//    0 384x120
+#//    1 384x240
+#//    2 768x240
+#//    3 768x480 (ours)
+#//
+#// NTSC RESOLUTION IS NTSC 486x440.
 
 ####################################################################################
 # THE     # A fully functional replica of the Weather Star 4000 and the infamous   #
@@ -20,7 +20,8 @@
 # (c) 2022 Kevan M. Pledger                                                        #
 #                                                                                  #
 ####################################################################################
-#   IF YOU ARE WONDERING WHERE TO BEGIN PLEASE READ THE README FILE IN ENTIRETY!   #
+#   IF YOU ARE WONDERING WHERE TO BEGIN PLEASE READ THE README FILE IN ENTIRETY!   # 
+#      Graphical object definitions are found in the slicegraphics.py class        #
 ####################################################################################
 
 
@@ -30,6 +31,8 @@ import pygame
 from pygame.locals import *
 import sys
 
+from slicegraphics import slicegraphics
+
 # Initialize pygame
 pygame.init()
 
@@ -38,55 +41,54 @@ pygame.display.set_caption("WeatherSLICE")
 icon = pygame.image.load('assets/graphics/weatherSLICE_icon.png')
 pygame.display.set_icon(icon)
 
-# Desired Screen resolutions (here for now) (width x height)
+# Desired viewport size (here for now)
+#   Classic viewport size is 768 width x 480 height
 userWidth = 768
 userHeight = 480
 
-# Set this display surface (aka window)
+# Initialize display surface (aka window)
 displaysurface = pygame.display.set_mode((userWidth, userHeight))
 displaysurface.fill((72,72,72))
 
-# INTERFACE ELEMENTS
-#    Please refer to GFX-Diagram images for labels
-#    bar_a : bottom-most bar without the borders
-#    bar_b : secondary bar rendered above the bottom most (typically orange)
-#    bar_c : bottom-most bar border dark
-#@@
-#@@ userHeight * 0.849 gives the exact height of the message crawl bar without borders when screensize is set to 768x480
-#
+# Initialize slicegraphics object as sliceWindow
+sliceWindow = slicegraphics()
+sliceWindow.drawGradient()
 
-# Twilight Background (purple -> orange gradient)
-# Colors:
-#    Purple : (34, 67, 137)
-#    Orange : (221, 117, 15)
-twilight_bg = pygame.image.load("assets/graphics/twilight_bg.bmp")
-TWILIGHT_BG_SIZE = (userWidth, 272)
-twilight_bg = pygame.transform.scale(twilight_bg, TWILIGHT_BG_SIZE)
+#// NOTES TO SELF:
+#// Using out slicegraphics object of sliceWindows, we will now
+#//   set our colors here (so we can change them later if desired)
+#//   and then call the individual functions to draw the bars
+#//   LATER: we will want to define these colors in a class or something
+#//   and then and call these draw functions in individual slide definitions
+#//   so we can create custom WS4000 slide routines (like changing order or adding more etc.)
 
-displaysurface.blit(twilight_bg, (0,95))
+# Draw Bar A
+#    colors may be changed using RGB values
+#    suggested colors are commented beside.
+#    Definitions may be found in slicegraphics.py
+color_a = ((47, 64, 131)) # suggested: 47, 64, 131
+sliceWindow.drawBar_A(color_a)
 
-# Obj a
-color_a = ((47, 64, 131))
-pygame.draw.rect(displaysurface, color_a, pygame.Rect(0, (userHeight * 0.849), userWidth,200))
-#@@                                                      ( x   y    w   h )
-# Obj b
-color_b = ((221,117,15))
-pygame.draw.rect(displaysurface, color_b, pygame.Rect(0, (userHeight * 0.765), userWidth,35)) #<---ME
-#barborderis pygame.draw.rect(displaysurface, color_b, pygame.Rect(0, (userHeight * 0.849), userWidth,1))
-# Obj c
-#color_c = (())
-#pygame.draw.rect(displaysurface, color_c, pygame.Rect(0, (userHeight * 0.849), userWidth,10))
+# bar b
+# orange bar above blue bar (part of twilight_bg)
+color_b = ((221,117,15)) # suggested: 221,117,15
+sliceWindow.drawBar_B(color_b)
 
+# bar c
+# bluish-white border bar at bottom
+color_c = ((93,125,189)) # suggested: 93,125,189
+sliceWindow.drawBar_C(color_c)
 
+# bar d
+# top indigo/dark blue bar -> not always shown
+color_d = ((39,17,97)) # suggested: 39,17,97 
+sliceWindow.drawBar_D(color_d)
 
-
+# Main program loop
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-
-    #displaysurface.blit(bottomBar_0, (50,50))
-    #displaysurface.blit(bottomBar_1, (50,150))
 
     pygame.display.update()
