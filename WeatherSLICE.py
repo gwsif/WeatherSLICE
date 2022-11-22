@@ -84,6 +84,25 @@ sliceWindow.drawBar_C(color_c)
 color_d = ((39,17,97)) # suggested: 39,17,97 
 sliceWindow.drawBar_D(color_d)
 
+# bar e
+# top gradient bar. Masked my Mask_A to give it a slanted appearance.
+color_e1 = ((221,116,15))
+color_e2 = ((200,109,21))
+color_e3 = ((183,98,34))
+color_e4 = ((165,90,42))
+color_e5 = ((149,80,51))
+color_e6 = ((134,71,63))
+color_e7 = ((115,62,74))
+color_e8 = ((94,56,80))
+sliceWindow.drawBar_E1(color_e1)
+sliceWindow.drawBar_E2(color_e2)
+sliceWindow.drawBar_E3(color_e3)
+sliceWindow.drawBar_E4(color_e4)
+sliceWindow.drawBar_E5(color_e5)
+sliceWindow.drawBar_E6(color_e6)
+sliceWindow.drawBar_E7(color_e7)
+sliceWindow.drawBar_E8(color_e8)
+
 # Main program loop
 while True:
     for event in pygame.event.get():

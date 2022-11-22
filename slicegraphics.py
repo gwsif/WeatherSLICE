@@ -57,3 +57,22 @@ class slicegraphics():
     # used to draw bar D
     def drawBar_D(self, color):
         pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.0), self.userWidth,91))
+
+    # used to draw bar E
+    # Bar E is made up of 8 individual smaller bars to portray a graduient and is masked by Mask A to give a slanted appearance
+    def drawBar_E1(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.065), self.userWidth,10))
+    def drawBar_E2(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.083), self.userWidth,10))
+    def drawBar_E3(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.098), self.userWidth,10))
+    def drawBar_E4(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.116), self.userWidth,10))
+    def drawBar_E5(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.132), self.userWidth,13))
+    def drawBar_E6(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.153), self.userWidth,10))
+    def drawBar_E7(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.169), self.userWidth,6))
+    def drawBar_E8(self, color):
+        pygame.draw.rect(self.screen, color, pygame.Rect(0, (self.userHeight * 0.183), self.userWidth,4))
