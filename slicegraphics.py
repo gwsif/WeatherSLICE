@@ -42,6 +42,13 @@ class slicegraphics():
         #// 91 for Y height is perfect match to screenshotfor twilight_bg size
         self.screen.blit(twilight_bg, (0,91))
 
+    # used to draw masking for Bar E
+    def drawMaskA(self):
+        mask_a = pygame.image.load("assets/graphics/MaskA.png")
+        mask_a_size = (self.userWidth, 91)
+        mask_a = pygame.transform.scale(mask_a, mask_a_size)
+        self.screen.blit(mask_a, (0,0))
+
     # BAR GENERATION DEFINITIONS
     # --------------------------
     def drawBar_A(self, color):

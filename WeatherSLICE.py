@@ -103,6 +103,10 @@ sliceWindow.drawBar_E6(color_e6)
 sliceWindow.drawBar_E7(color_e7)
 sliceWindow.drawBar_E8(color_e8)
 
+# mask a
+# indigo masking that produces the slanted bars seen on bar e
+sliceWindow.drawMaskA()
+
 # Main program loop
 while True:
     for event in pygame.event.get():
